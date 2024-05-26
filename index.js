@@ -11,6 +11,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+//custom middleware
+
 //Database Authenticate
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.2p5zaxk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
@@ -26,6 +28,9 @@ const client = new MongoClient(uri, {
 //Send and Get data from sever to database
 async function run() {
   try {
+    //User Authentication Related API (JWT)
+    //Admin Related API
+    //Common API
   } catch (err) {
     console.log("Error from database:", err);
   }
